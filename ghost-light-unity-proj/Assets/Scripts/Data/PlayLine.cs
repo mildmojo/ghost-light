@@ -8,8 +8,10 @@ using UnityEngine;
 [System.Serializable]
 public class PlayLine
 {
-    public string LineText = "";
-    public AudioClip LineAudio;
+    public string LineOneText = "";
+    public string LineTwoText = "";
+    public AudioClip LineOneAudio;
+    public AudioClip LineTwoAudio;
     public Emotions Emote;
     public Directions Direction;
 }
