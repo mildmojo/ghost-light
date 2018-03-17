@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114968629717808132}
   - component: {fileID: 54968698290263554}
   m_Layer: 0
-  m_Name: Actor
+  m_Name: Lover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c1a082398264960a2d288e26880e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 2
+  role: 3
   FaceRenderer: {fileID: 212252208975540014}
   moveSpeed: 0
   deadZone: 0
@@ -309,7 +309,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 30bb3f5203fa6fe44a580828161a07e5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7941176, g: 0.525519, b: 0.525519, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

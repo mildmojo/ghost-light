@@ -27,11 +27,19 @@ public class Actor : MonoBehaviour {
   private bool isSelected;
   private Rigidbody body;
 
-  public void Start() {
+    private void Awake()
+    {
+        spotlight.SetActive(false);
+    }
+    public void Start() {
     sqrMoveSpeed = moveSpeed * moveSpeed;
     sqrDeadzone = deadZone * deadZone;
     body = GetComponent<Rigidbody>();
 
+        if(role != Role.Chorus)
+        {
+            ScriptManager.OnLineChanged.AddListener(UpdateMainActorStance);
+        }
         ScriptManager.OnLineChanged.AddListener(UpdateEmotion);
 
         facesByEmotion = EmotionMap.ToDictionary(t => t.Emotion, t => t.EmotionSprite);
@@ -55,18 +63,38 @@ public class Actor : MonoBehaviour {
   public void Select() {
     spotlight.SetActive(true);
     isSelected = true;
-  }
+    }
 
   public void Unselect() {
     spotlight.SetActive(false);
     isSelected = false;
-  }
+    }
+
+    private void UpdateMainActorStance(PlayLine line)
+    {
+        if(line.Speaker == role)
+        {
+            spotlight.SetActive(true);
+        } else
+        {
+            spotlight.SetActive(false);
+        }
+    }
 
     private void UpdateEmotion(PlayLine line)
     {
-        if(facesByEmotion.ContainsKey(line.Emote))
+        if(role == Role.Chorus || line.Speaker == role)
         {
-            FaceRenderer.sprite = facesByEmotion[line.Emote];
+            if (facesByEmotion.ContainsKey(line.Emote))
+            {
+                FaceRenderer.sprite = facesByEmotion[line.Emote];
+            }
+        } else
+        {
+            if (facesByEmotion.ContainsKey(Emotions.None))
+            {
+                FaceRenderer.sprite = facesByEmotion[Emotions.None];
+            }
         }
     }
 
