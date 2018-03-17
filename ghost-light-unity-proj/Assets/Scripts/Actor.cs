@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 public class Actor : MonoBehaviour {
+    public Role role;
     public SpriteRenderer FaceRenderer;
     
   public float moveSpeed;

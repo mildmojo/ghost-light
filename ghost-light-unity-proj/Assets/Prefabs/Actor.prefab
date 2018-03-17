@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c1a082398264960a2d288e26880e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  role: 2
   FaceRenderer: {fileID: 212252208975540014}
   moveSpeed: 0
   deadZone: 0

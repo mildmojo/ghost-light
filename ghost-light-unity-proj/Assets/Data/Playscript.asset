@@ -14,8 +14,9 @@ MonoBehaviour:
   Name: 
   Scenes:
   - Name: Hero Leaves Home
+    Roles: 0100000003000000
     Lines:
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Friends, gather 'round me
       LineTwoText: Family, heed me.
       Syllables: 10
@@ -23,7 +24,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: The gods have selected
       LineTwoText: me as their champion!
       Syllables: 10
@@ -31,7 +32,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: To go on a quest, a
       LineTwoText: dangerous epic!
       Syllables: 10
@@ -39,7 +40,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: I'll be a hero
       LineTwoText: conquering monsters
       Syllables: 10
@@ -47,7 +48,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Traveling solo,
       LineTwoText: seeking out honor!
       Syllables: 10
@@ -55,7 +56,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Now I depart you,
       LineTwoText: for glory awaits me!
       Syllables: 10
@@ -64,7 +65,7 @@ MonoBehaviour:
       Emote: 1
       Direction: 0
     ChorusLines:
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: There goes our hero,
       LineTwoText: 
       Syllables: 5
@@ -72,7 +73,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: Out to make hist'ry!
       LineTwoText: 
       Syllables: 5
@@ -80,7 +81,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: What will await them,
       LineTwoText: 
       Syllables: 5
@@ -88,7 +89,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: What hardships, what dangers?
       LineTwoText: 
       Syllables: 5
@@ -96,7 +97,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: Wish them safe travels?
       LineTwoText: 
       Syllables: 5
@@ -104,7 +105,7 @@ MonoBehaviour:
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: Chorus
+    - Speaker: 2
       LineOneText: Oh, how we'll miss them!
       LineTwoText: 
       Syllables: 5
@@ -113,249 +114,494 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Hero Fights Sea Witch
+    Roles: 0100000004000000
     Lines:
-    - Speaker: 
+    - Speaker: 1
       LineOneText: I will defeat you,
       LineTwoText: Witch of the Ocean!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Though you have hurt me,
       LineTwoText: still I will conquer.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: I'll fight for my honor
       LineTwoText: and salvage my glory!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 4
       LineOneText: Foolish, so foolish;
       LineTwoText: You'll die where you stand!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
-    - Speaker: 
+    - Speaker: 4
       LineOneText: Death won't come quickly;
       LineTwoText: you deserve suff'ring.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
-    - Speaker: 
+    - Speaker: 4
       LineOneText: May you be met with
       LineTwoText: merciless hellfire!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
-    ChorusLines: []
+    ChorusLines:
+    - Speaker: 2
+      LineOneText: Will they defeat her?
+      LineTwoText: 
+      Syllables: 0
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Ouch; the witch crushed them!
+      LineTwoText: 
+      Syllables: 0
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Wait, there's our hero
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Standing defiant!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Swinging their sword, and/
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Yes! They have vanquished!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
   - Name: Hero Fights Cyclops on Island
+    Roles: 0100000005000000
     Lines:
-    - Speaker: 
+    - Speaker: 1
       LineOneText: What is this island?
       LineTwoText: What creatures live here?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 4
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: I've found a cave here
       LineTwoText: seemingly empty.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Wait, what's this mountain?
       LineTwoText: A Cyclops lies sleeping!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 5
       LineOneText: Who dares disturb me
       LineTwoText: from my sweet slumber?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 3
       Direction: 0
-    - Speaker: 
+    - Speaker: 5
       LineOneText: I'll eat you, but first,
       LineTwoText: Who am I killing?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 3
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Oh, I am No-One
       LineTwoText: here to defeat you!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    ChorusLines: []
+    ChorusLines:
+    - Speaker: 2
+      LineOneText: (The) Cyclops's huge head comes
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Down to our hero
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (but) They have their sword out
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (and) pieces its one eye
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: No-One has killed me!?
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Cried the harmed giant
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
   - Name: Love Thinks Hero is Dead
+    Roles: 03000000
     Lines:
-    - Speaker: 
+    - Speaker: 3
       LineOneText: What are you saying?
       LineTwoText: Where is my lover?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 4
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: They can't have perished!
       LineTwoText: Tell me you're joking!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Oh, my poor hero,
       LineTwoText: What has befell you?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Killed by a monster?
       LineTwoText: Drowned in the ocean?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: What could have happened
       LineTwoText: to take you from this life?
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
-      Emote: 0
+      Emote: 4
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Love, if you're out there,
       LineTwoText: Please be alive!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    ChorusLines: []
+    ChorusLines:
+    - Speaker: 2
+      LineOneText: Nothing to fear yet,
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (our) Hero's still out there.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (Their) Story's not over.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (Their) Strength will protect them.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Just keep your faith up,
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Soon they'll return home!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
   - Name: Hero Reunites with Love
+    Roles: 
     Lines:
-    - Speaker: 
+    - Speaker: 3
       LineOneText: I've missed you greatly,
       LineTwoText: Hero, my lover.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Lonesome, I wandered
       LineTwoText: All through the village,
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Restlessly searching
       LineTwoText: for news of your travels.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Worried you'd perished,
       LineTwoText: nightmares have plagued me.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: With your return, now
       LineTwoText: I can sleep peacef'lly.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 3
       LineOneText: Joyous occasion!
       LineTwoText: We're reunited!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    ChorusLines: []
+    ChorusLines:
+    - Speaker: 2
+      LineOneText: Homecoming romance,
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: They're reunited!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Lovers together,
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (for)ever and always.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (No) matter the story,
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: True love will conquer!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
   - Name: Hero Returns Home
+    Roles: 0100000003000000
     Lines:
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Friends, gather 'round, I'll
       LineTwoText: tell you a story
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Of my many travels,
       LineTwoText: hardships and glories.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: I fought many monsters,
       LineTwoText: just barely survived!
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: And found a new island
       LineTwoText: full of strange riches.
-      Syllables: 0
+      Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - Speaker: 
+    - Speaker: 1
       LineOneText: Now, I'll announce my
       LineTwoText: many discov'ries.
-      Syllables: 0
+      Syllables: 10
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 1
+      Direction: 0
+    ChorusLines:
+    - Speaker: 2
+      LineOneText: Welcome back, hero!
+      LineTwoText: 
+      Syllables: 5
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    ChorusLines: []
+    - Speaker: 2
+      LineOneText: Oh, how we've missed you.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Speak not of monsters
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Or foreign islands;
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: Rest now, our hero.
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: 2
+      LineOneText: (our) Epic concludes here!
+      LineTwoText: 
+      Syllables: 5
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0

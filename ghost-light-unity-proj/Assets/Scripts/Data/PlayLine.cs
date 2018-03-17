@@ -8,7 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayLine
 {
-    public string Speaker = "";
+    public Role Speaker = Role.None;
     public string LineOneText = "";
     public string LineTwoText = "";
     public int Syllables;
