@@ -48,6 +48,10 @@ public class MeterManager : MonoBehaviour {
   }
 
   public void Update() {
+        if(Menu.Instance.Open)
+        {
+            return;
+        }
     elapsedTime += AudioSettings.dspTime - lastTick;
     deltaTime = AudioSettings.dspTime - lastTick;
     lastTick = AudioSettings.dspTime;
@@ -66,7 +70,7 @@ public class MeterManager : MonoBehaviour {
 
   public void UpdateBeatsPerActor() {
     var line = ScriptManager.instance.CurrentLine;
-    beatsPerActor = line.Syllables;
+    beatsPerActor = line.Syllables > 0 ? line.Syllables : 10;
 // Debug.Log(beatsPerActor);
   }
 
