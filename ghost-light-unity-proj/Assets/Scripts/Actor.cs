@@ -4,15 +4,16 @@ using UnityEngine;
 using System.Linq;
 
 public class Actor : MonoBehaviour {
-    public Role role;
-    public SpriteRenderer FaceRenderer;
-    
+  public Role role;
+  public SpriteRenderer FaceRenderer;
+
   public float moveSpeed;
   public float deadZone;
+  public float maxMarkDistance;
   public GameObject spotlight;
-
-    public List<EmotionFace> EmotionMap;
-    private Dictionary<Emotions, Sprite> facesByEmotion;
+  public List<EmotionFace> EmotionMap;
+  private Dictionary<Emotions, Sprite> facesByEmotion;
+  public Transform mark;
 
   public enum Direction {
     UP = 0,
@@ -21,17 +22,22 @@ public class Actor : MonoBehaviour {
     LEFT = 4
   }
 
+  private StageManager stageManager;
+  private MeterManager meterManager;
   private Vector3 motion;
   private float sqrMoveSpeed;
   private float sqrDeadzone;
   private bool isSelected;
+  private bool hasHitMark;
   private Rigidbody body;
 
     private void Awake()
     {
         spotlight.SetActive(false);
     }
-    public void Start() {
+  public void Start() {
+    stageManager = StageManager.instance;
+    meterManager = MeterManager.instance;
     sqrMoveSpeed = moveSpeed * moveSpeed;
     sqrDeadzone = deadZone * deadZone;
     body = GetComponent<Rigidbody>();
@@ -42,16 +48,18 @@ public class Actor : MonoBehaviour {
         }
         ScriptManager.OnLineChanged.AddListener(UpdateEmotion);
 
-        facesByEmotion = EmotionMap.ToDictionary(t => t.Emotion, t => t.EmotionSprite);
+    facesByEmotion = EmotionMap.ToDictionary(t => t.Emotion, t => t.EmotionSprite);
    }
 
   public void Update() {
     if (isSelected) {
+      handleInputs();
+
       if (StageManager.instance.CanActorEmote()) {
+        // no-op
       }
 
-      if (StageManager.instance.CanActorMove()) {
-        handleInputs();
+      if (stageManager.CanActorMove()) {
         body.velocity = motion;
         // gameObject.transform.position += motion * (float)MeterManager.instance.deltaTime;
       }
@@ -63,7 +71,12 @@ public class Actor : MonoBehaviour {
   public void Select() {
     spotlight.SetActive(true);
     isSelected = true;
-    }
+        if(mark != null)
+        {
+            hasHitMark = false;
+            throwMark();
+        }
+  }
 
   public void Unselect() {
     spotlight.SetActive(false);
@@ -96,7 +109,23 @@ public class Actor : MonoBehaviour {
                 FaceRenderer.sprite = facesByEmotion[Emotions.None];
             }
         }
+        if(mark != null)
+        {
+            mark.gameObject.SetActive(false);
+        }
     }
+
+  void OnTriggerEnter(Collider c) {
+    if (c.gameObject == mark.gameObject) {
+      stageManager.ActorSuccess(1.5f);
+    }
+  }
+
+  void OnTriggerEnter2D(Collider2D c) {
+    if (c.gameObject == mark.gameObject) {
+      stageManager.ActorSuccess(1.5f);
+    }
+  }
 
   private void handleInputs() {
     motion = Vector3.zero;
@@ -115,11 +144,30 @@ public class Actor : MonoBehaviour {
     }
 
     if (Input.GetButtonDown("LongSyllable")) {
-      StageManager.instance.ActorSuccess();
+      if (meterManager.IsOnLongSyllable()) {
+        stageManager.ActorSuccess();
+      } else {
+        stageManager.ActorFail();
+      }
     }
 
     if (Input.GetButtonDown("ShortSyllable")) {
-      StageManager.instance.ActorSuccess();
+      if (meterManager.IsOnShortSyllable()) {
+        stageManager.ActorSuccess();
+      } else {
+        stageManager.ActorFail();
+      }
     }
+  }
+
+  private void throwMark() {
+        if (!StageManager.instance.CanActorMove()) return;
+
+    hasHitMark = false;
+    var offset = Random.insideUnitCircle * maxMarkDistance;
+    var newPos = transform.position + new Vector3(offset.x, offset.y, 0);
+    mark.position = transform.position;
+    mark.gameObject.SetActive(true);
+    LeanTween.move(mark.gameObject, newPos, 0.25f).setEaseOutCubic();
   }
 }

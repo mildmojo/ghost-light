@@ -44,7 +44,6 @@ public class StageManager : MonoBehaviour {
   void Start() {
     MeterManager.instance.OnActorChanged.AddListener(() => {
       var nextActionIdx = Random.Range(0,2);
-Debug.Log("changing secondary action: " + nextActionIdx);
 
       currentSecondaryAction = secondaryActions[nextActionIdx];
     });
@@ -68,5 +67,18 @@ Debug.Log("changing secondary action: " + nextActionIdx);
 
   public void ActorSuccess(float factor = 1f) {
     momentum += momentumIncrement * factor;
+    momentum = Mathf.Clamp(momentum, 0, momentumMax);
+    pulseMeter();
+  }
+
+  public void ActorFail(float factor = 1f) {
+    momentum -= momentumIncrement * factor / 2f;
+  }
+
+  private void pulseMeter() {
+    var meterRect = momentumMeter.GetComponent<RectTransform>();
+    var seq = LeanTween.sequence();
+    seq.append(LeanTween.scale(meterRect, new Vector2(1.1f, 1.1f), 0.1f));
+    seq.append(LeanTween.scale(meterRect, new Vector2(1/1.1f, 1/1.1f), 0.1f));
   }
 }
