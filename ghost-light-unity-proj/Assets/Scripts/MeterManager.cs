@@ -7,9 +7,12 @@ using UnityEngine.Events;
 // On meter beats, advance selected actor
 
 public class MeterManager : MonoBehaviour {
+  public static MeterManager instance;
+
   public int bpm;
   public AudioClip musicClip;
   public AudioSource musicSource;
+  public UnityEvent onMeasureFinish;
   public List<Actor> actors;
 
   private Actor selectedActor;
@@ -18,7 +21,12 @@ public class MeterManager : MonoBehaviour {
   private double elapsedTime;
   private int beatCount;
 
-    public UnityEvent OnActorChanged = new UnityEvent();
+  public UnityEvent OnActorChanged = new UnityEvent();
+
+  public void Awake() {
+    instance = this;
+  }
+
   public void Start() {
     lastTick = AudioSettings.dspTime;
 
@@ -39,17 +47,17 @@ public class MeterManager : MonoBehaviour {
       beatCount++;
       elapsedTime = 0f;
       if (beatCount > 0 && beatCount % 5 == 0) {
-        nextActor();
+        if (onMeasureFinish != null) onMeasureFinish.Invoke();
       }
     }
   }
 
-  private void nextActor() {
+  public void NextActor() {
     selectedActor.Unselect();
     actorIdx = (actorIdx + 1) % actors.Count;
     selectedActor = actors[actorIdx];
     selectedActor.Select();
 
-        OnActorChanged.Invoke();
+    OnActorChanged.Invoke();
   }
 }
