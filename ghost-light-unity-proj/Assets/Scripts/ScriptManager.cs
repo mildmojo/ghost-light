@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 //Handle setting the currently playing VO and text from a script file
 public class ScriptManager : MonoBehaviour {
+    public static ScriptManager instance;
+
     public PlayScript scriptToPerform;
 
     public PlayScene CurrentScene
@@ -60,12 +62,13 @@ public class ScriptManager : MonoBehaviour {
     private MeterManager meterManager;
 
     void Awake() {
-        meterManager = FindObjectOfType<MeterManager>();
-        meterManager.OnActorChanged.AddListener(NextLine);
+        instance = this;
     }
 
     private void Start()
     {
+        meterManager = MeterManager.instance;
+        meterManager.OnActorChanged.AddListener(NextLine);
         OnLineChanged.Invoke(CurrentLine);
     }
 

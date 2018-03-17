@@ -11,6 +11,7 @@ public class PlayLine
     public string Speaker = "";
     public string LineOneText = "";
     public string LineTwoText = "";
+    public int Syllables;
     public AudioClip LineOneAudio;
     public AudioClip LineTwoAudio;
     public Emotions Emote;

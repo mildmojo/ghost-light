@@ -12,16 +12,22 @@ public class MeterManager : MonoBehaviour {
   public int bpm;
   public AudioClip musicClip;
   public AudioSource musicSource;
-  public UnityEvent onMeasureFinish;
+  public UnityEvent onMeasureFinish = new UnityEvent();
+  public UnityEvent OnActorChanged = new UnityEvent();
   public List<Actor> actors;
+
+  [HideInInspector]
+  public double deltaTime;
+  [HideInInspector]
+  public int beatsPerActor = 10;
 
   private Actor selectedActor;
   private int actorIdx;
+  private int lineIdx;
   private double lastTick;
   private double elapsedTime;
   private int beatCount;
 
-  public UnityEvent OnActorChanged = new UnityEvent();
 
   public void Awake() {
     instance = this;
@@ -34,30 +40,42 @@ public class MeterManager : MonoBehaviour {
     selectedActor = actors[0];
     selectedActor.Select();
 
+    UpdateBeatsPerActor();
+    onMeasureFinish.AddListener(NextActor);
+
     musicSource.clip = musicClip;
     musicSource.Play();
   }
 
   public void Update() {
     elapsedTime += AudioSettings.dspTime - lastTick;
+    deltaTime = AudioSettings.dspTime - lastTick;
     lastTick = AudioSettings.dspTime;
 
     // One beat elapsed?
     if (elapsedTime > 1 / (bpm / 60f)) {
       beatCount++;
       elapsedTime = 0f;
-      if (beatCount > 0 && beatCount % 5 == 0) {
-        if (onMeasureFinish != null) onMeasureFinish.Invoke();
+      if (beatCount > 0 && beatCount % beatsPerActor == 0) {
+        onMeasureFinish.Invoke();
       }
     }
+
+    UpdateBeatsPerActor();
+  }
+
+  public void UpdateBeatsPerActor() {
+    var line = ScriptManager.instance.CurrentLine;
+    beatsPerActor = line.Syllables;
+// Debug.Log(beatsPerActor);
   }
 
   public void NextActor() {
+Debug.Log("next actor!");
     selectedActor.Unselect();
     actorIdx = (actorIdx + 1) % actors.Count;
     selectedActor = actors[actorIdx];
     selectedActor.Select();
-
     OnActorChanged.Invoke();
   }
 }

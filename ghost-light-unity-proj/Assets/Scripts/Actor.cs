@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using InControl;
 
 public class Actor : MonoBehaviour {
   public float moveSpeed;
   public float deadZone;
   public GameObject spotlight;
+  public List<GameObject> emotions;
 
   public enum Direction {
     UP = 0,
@@ -19,17 +19,29 @@ public class Actor : MonoBehaviour {
   private float sqrMoveSpeed;
   private float sqrDeadzone;
   private bool isSelected;
+  private Rigidbody body;
 
   public void Start() {
     sqrMoveSpeed = moveSpeed * moveSpeed;
     sqrDeadzone = deadZone * deadZone;
+    body = GetComponent<Rigidbody>();
   }
 
   public void Update() {
     if (isSelected) {
-      handleInputs();
+      if (StageManager.instance.CanActorEmote()) {
+        emotions.ForEach(emotion => emotion.SetActive(true));
+      }
+
+      if (StageManager.instance.CanActorMove()) {
+        handleInputs();
+        body.velocity = motion;
+        // gameObject.transform.position += motion * (float)MeterManager.instance.deltaTime;
+      }
+    } else {
+      body.velocity = Vector3.zero;
+      emotions.ForEach(emotion => emotion.SetActive(false));
     }
-    gameObject.transform.position += motion;
   }
 
   public void Select() {
@@ -45,18 +57,10 @@ public class Actor : MonoBehaviour {
   private void handleInputs() {
     motion = Vector3.zero;
 
-    if (Input.GetButton("LeftArrow")) {
-      motion += Vector3.left * moveSpeed;
-    }
-    if (Input.GetButton("RightArrow")) {
-      motion += Vector3.right * moveSpeed;
-    }
-    if (Input.GetButton("UpArrow")) {
-      motion += Vector3.up * moveSpeed;
-    }
-    if (Input.GetButton("DownArrow")) {
-      motion += Vector3.down * moveSpeed;
-    }
+    var x = Input.GetAxis("Horizontal");
+    motion += x * Vector3.right * moveSpeed;
+    var y = Input.GetAxis("Vertical");
+    motion += y * Vector3.up * moveSpeed;
 
     if (motion.sqrMagnitude < sqrDeadzone) {
       motion = Vector3.zero;
@@ -64,6 +68,14 @@ public class Actor : MonoBehaviour {
 
     if (motion.sqrMagnitude > sqrMoveSpeed) {
       motion = motion.normalized * moveSpeed;
+    }
+
+    if (Input.GetButtonDown("LongSyllable")) {
+      StageManager.instance.ActorSuccess();
+    }
+
+    if (Input.GetButtonDown("ShortSyllable")) {
+      StageManager.instance.ActorSuccess();
     }
   }
 }
