@@ -8,5 +8,5 @@ public enum Emotions
     Happy = 1,
     Sad = 2,
     Angry = 3,
-    Stoic = 4
+    Confused = 4
 }

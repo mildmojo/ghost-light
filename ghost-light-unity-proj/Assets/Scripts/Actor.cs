@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Actor : MonoBehaviour {
+    public SpriteRenderer FaceRenderer;
+    
   public float moveSpeed;
   public float deadZone;
   public GameObject spotlight;
-  public List<GameObject> emotions;
+
+    public List<EmotionFace> EmotionMap;
+    private Dictionary<Emotions, Sprite> facesByEmotion;
 
   public enum Direction {
     UP = 0,
@@ -25,12 +30,15 @@ public class Actor : MonoBehaviour {
     sqrMoveSpeed = moveSpeed * moveSpeed;
     sqrDeadzone = deadZone * deadZone;
     body = GetComponent<Rigidbody>();
-  }
+
+        ScriptManager.OnLineChanged.AddListener(UpdateEmotion);
+
+        facesByEmotion = EmotionMap.ToDictionary(t => t.Emotion, t => t.EmotionSprite);
+   }
 
   public void Update() {
     if (isSelected) {
       if (StageManager.instance.CanActorEmote()) {
-        emotions.ForEach(emotion => emotion.SetActive(true));
       }
 
       if (StageManager.instance.CanActorMove()) {
@@ -40,7 +48,6 @@ public class Actor : MonoBehaviour {
       }
     } else {
       body.velocity = Vector3.zero;
-      emotions.ForEach(emotion => emotion.SetActive(false));
     }
   }
 
@@ -53,6 +60,14 @@ public class Actor : MonoBehaviour {
     spotlight.SetActive(false);
     isSelected = false;
   }
+
+    private void UpdateEmotion(PlayLine line)
+    {
+        if(facesByEmotion.ContainsKey(line.Emote))
+        {
+            FaceRenderer.sprite = facesByEmotion[line.Emote];
+        }
+    }
 
   private void handleInputs() {
     motion = Vector3.zero;
