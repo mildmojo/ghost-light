@@ -24,16 +24,16 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: (The) Gods have selected
-      LineTwoText: Me as their champion!
+      LineOneText: The gods have selected
+      LineTwoText: me as their champion!
       Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
     - Speaker: 
-      LineOneText: (To) go on a quest, a
-      LineTwoText: Dangerous epic!
+      LineOneText: To go on a quest, a
+      LineTwoText: dangerous epic!
       Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
       Direction: 0
     - Speaker: 
       LineOneText: I'll be a hero
-      LineTwoText: Conquering monsters
+      LineTwoText: conquering monsters
       Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
       Direction: 0
     - Speaker: 
       LineOneText: Traveling solo,
-      LineTwoText: Seeking out honor!
+      LineTwoText: seeking out honor!
       Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
       Direction: 0
     - Speaker: 
       LineOneText: Now I depart you,
-      LineTwoText: (for) Glory awaits me!
+      LineTwoText: for glory awaits me!
       Syllables: 10
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
@@ -83,13 +83,13 @@ MonoBehaviour:
     - Speaker: Chorus
       LineOneText: What will await them,
       LineTwoText: 
-      Syllables: 0
+      Syllables: 5
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: Chorus
-      LineOneText: (what) Hardships, what dangers?
+      LineOneText: What hardships, what dangers?
       LineTwoText: 
       Syllables: 5
       LineOneAudio: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
     - Speaker: Chorus
-      LineOneText: Oh, how we?ll miss them!
+      LineOneText: Oh, how we'll miss them!
       LineTwoText: 
       Syllables: 5
       LineOneAudio: {fileID: 0}
@@ -117,47 +117,47 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: I will defeat you,
       LineTwoText: Witch of the Ocean!
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
     - Speaker: 
       LineOneText: Though you have hurt me,
-      LineTwoText: Still I will conquer.
-      Syllables: 10
+      LineTwoText: still I will conquer.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
     - Speaker: 
-      LineOneText: (I'll) fight for my honor
-      LineTwoText: (and) Salvage my glory!
-      Syllables: 10
+      LineOneText: I'll fight for my honor
+      LineTwoText: and salvage my glory!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: Foolish, so foolish;
-      LineTwoText: (You'll) Die where you stand!
-      Syllables: 10
+      LineTwoText: You'll die where you stand!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
     - Speaker: 
       LineOneText: Death won't come quickly;
-      LineTwoText: You deserve suff'ring.
-      Syllables: 10
+      LineTwoText: you deserve suff'ring.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
     - Speaker: 
       LineOneText: May you be met with
-      LineTwoText: Merciless hellfire!
-      Syllables: 10
+      LineTwoText: merciless hellfire!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
@@ -167,48 +167,48 @@ MonoBehaviour:
     Lines:
     - Speaker: 
       LineOneText: What is this island?
-      LineTwoText: What creatures live here??
-      Syllables: 10
+      LineTwoText: What creatures live here?
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: I've found a cave here
-      LineTwoText: Seemingly empty.
-      Syllables: 10
+      LineTwoText: seemingly empty.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: Wait, what's this mountain?
-      LineTwoText: (a) Cyclops lies sleeping!
-      Syllables: 10
+      LineTwoText: A Cyclops lies sleeping!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: Who dares disturb me
-      LineTwoText: From my sweet slumber?
-      Syllables: 10
+      LineTwoText: from my sweet slumber?
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: (I'll) Eat you, but first
+      LineOneText: I'll eat you, but first,
       LineTwoText: Who am I killing?
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: Oh, I am No-One
-      LineTwoText: Here to defeat you!
-      Syllables: 10
+      LineTwoText: here to defeat you!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: What are you saying?
       LineTwoText: Where is my lover?
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
@@ -227,39 +227,39 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: They can't have perished!
       LineTwoText: Tell me you're joking!
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: Oh, my poor hero
-      LineTwoText: What has befell you
-      Syllables: 10
+      LineOneText: Oh, my poor hero,
+      LineTwoText: What has befell you?
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: Killed by a monster
+      LineOneText: Killed by a monster?
       LineTwoText: Drowned in the ocean?
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: What could have happened
-      LineTwoText: (to) Take you from this life?
-      Syllables: 10
+      LineTwoText: to take you from this life?
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: Love, if you're out there?
+      LineOneText: Love, if you're out there,
       LineTwoText: Please be alive!
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: I've missed you greatly,
       LineTwoText: Hero, my lover.
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
@@ -278,15 +278,15 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: Lonesome, I wandered
       LineTwoText: All through the village,
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
     - Speaker: 
       LineOneText: Restlessly searching
-      LineTwoText: (for) News of your travels.
-      Syllables: 10
+      LineTwoText: for news of your travels.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
@@ -294,7 +294,7 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: Worried you'd perished,
       LineTwoText: nightmares have plagued me.
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
@@ -302,7 +302,7 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: With your return, now
       LineTwoText: I can sleep peacef'lly.
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
@@ -310,7 +310,7 @@ MonoBehaviour:
     - Speaker: 
       LineOneText: Joyous occasion!
       LineTwoText: We're reunited!
-      Syllables: 10
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
@@ -320,40 +320,40 @@ MonoBehaviour:
     Lines:
     - Speaker: 
       LineOneText: Friends, gather 'round, I'll
-      LineTwoText: Tell you a story
-      Syllables: 10
+      LineTwoText: tell you a story
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
     - Speaker: 
-      LineOneText: (of) My many travels,
-      LineTwoText: Hardships and glories.
-      Syllables: 10
+      LineOneText: Of my many travels,
+      LineTwoText: hardships and glories.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: (I) fought many monsters,
-      LineTwoText: Just barely survived!
-      Syllables: 10
+      LineOneText: I fought many monsters,
+      LineTwoText: just barely survived!
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
-      LineOneText: (and) found a new island
-      LineTwoText: Full of strange riches.
-      Syllables: 10
+      LineOneText: And found a new island
+      LineTwoText: full of strange riches.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
     - Speaker: 
       LineOneText: Now, I'll announce my
-      LineTwoText: Many discov'ries.
-      Syllables: 10
+      LineTwoText: many discov'ries.
+      Syllables: 0
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
