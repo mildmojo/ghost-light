@@ -64,11 +64,13 @@ public class Actor : MonoBehaviour {
     spotlight.SetActive(true);
     isSelected = true;
     hasHitMark = false;
+    throwMark();
   }
 
   public void Unselect() {
     spotlight.SetActive(false);
     isSelected = false;
+    mark.gameObject.SetActive(false);
   }
 
   private void UpdateEmotion(PlayLine line)
@@ -80,13 +82,13 @@ public class Actor : MonoBehaviour {
   }
 
   void OnTriggerEnter(Collider c) {
-    if (c.CompareTag("mark")) {
+    if (c.gameObject == mark.gameObject) {
       stageManager.ActorSuccess(1.5f);
     }
   }
 
   void OnTriggerEnter2D(Collider2D c) {
-    if (c.CompareTag("mark")) {
+    if (c.gameObject == mark.gameObject) {
       stageManager.ActorSuccess(1.5f);
     }
   }
@@ -122,5 +124,16 @@ public class Actor : MonoBehaviour {
         stageManager.ActorFail();
       }
     }
+  }
+
+  private void throwMark() {
+    if (!stageManager.CanActorMove()) return;
+
+    hasHitMark = false;
+    var offset = Random.insideUnitCircle * maxMarkDistance;
+    var newPos = transform.position + new Vector3(offset.x, offset.y, 0);
+    mark.position = transform.position;
+    mark.gameObject.SetActive(true);
+    LeanTween.move(mark.gameObject, newPos, 0.25f).setEaseOutCubic();
   }
 }

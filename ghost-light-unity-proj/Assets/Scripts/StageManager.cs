@@ -44,7 +44,6 @@ public class StageManager : MonoBehaviour {
   void Start() {
     MeterManager.instance.OnActorChanged.AddListener(() => {
       var nextActionIdx = Random.Range(0,2);
-Debug.Log("changing secondary action: " + nextActionIdx);
 
       currentSecondaryAction = secondaryActions[nextActionIdx];
     });
