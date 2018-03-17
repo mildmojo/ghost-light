@@ -15,229 +15,306 @@ MonoBehaviour:
   Scenes:
   - Name: Hero Leaves Home
     Lines:
-    - LineOneText: Friends, gather 'round, I'll
-      LineTwoText: Tell you a story
+    - Speaker: 
+      LineOneText: Friends, gather 'round me
+      LineTwoText: Family, heed me.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: (of) My many travels,
-      LineTwoText: Hardships and glories.
+    - Speaker: 
+      LineOneText: (The) Gods have selected
+      LineTwoText: Me as their champion!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: (I) fought many monsters,
-      LineTwoText: Just barely survived!
+    - Speaker: 
+      LineOneText: (To) go on a quest, a
+      LineTwoText: Dangerous epic!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: (and) found a new island
-      LineTwoText: Full of strange riches.
+    - Speaker: 
+      LineOneText: I'll be a hero
+      LineTwoText: Conquering monsters
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: Now, I'll announce my
-      LineTwoText: Many discov'ries.
+    - Speaker: 
+      LineOneText: Traveling solo,
+      LineTwoText: Seeking out honor!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: Now I depart you,
-      LineTwoText: '(for) Glory awaits '
+    - Speaker: 
+      LineOneText: Now I depart you,
+      LineTwoText: (for) Glory awaits me!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
+      Direction: 0
+    ChorusLines:
+    - Speaker: Chorus
+      LineOneText: There goes our hero,
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: Chorus
+      LineOneText: Out to make hist'ry!
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: Chorus
+      LineOneText: What will await them,
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: Chorus
+      LineOneText: (what) Hardships, what dangers?
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: Chorus
+      LineOneText: Wish them safe travels?
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
+      Direction: 0
+    - Speaker: Chorus
+      LineOneText: Oh, how we?ll miss them!
+      LineTwoText: 
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 0
       Direction: 0
   - Name: Hero Fights Sea Witch
     Lines:
-    - LineOneText: I will defeat you,
+    - Speaker: 
+      LineOneText: I will defeat you,
       LineTwoText: Witch of the Ocean!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: Though you have hurt me,
+    - Speaker: 
+      LineOneText: Though you have hurt me,
       LineTwoText: Still I will conquer.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: (I?ll) fight for my honor
+    - Speaker: 
+      LineOneText: (I'll) fight for my honor
       LineTwoText: (and) Salvage my glory!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Foolish, so foolish;
-      LineTwoText: (You?ll) Die where you stand!
+    - Speaker: 
+      LineOneText: Foolish, so foolish;
+      LineTwoText: (You'll) Die where you stand!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
-    - LineOneText: Death won't come quickly;
+    - Speaker: 
+      LineOneText: Death won't come quickly;
       LineTwoText: You deserve suff'ring.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
-    - LineOneText: May you be met with
+    - Speaker: 
+      LineOneText: May you be met with
       LineTwoText: Merciless hellfire!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 3
       Direction: 0
+    ChorusLines: []
   - Name: Hero Fights Cyclops on Island
     Lines:
-    - LineOneText: What is this island?
+    - Speaker: 
+      LineOneText: What is this island?
       LineTwoText: What creatures live here??
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: I've found a cave here
+    - Speaker: 
+      LineOneText: I've found a cave here
       LineTwoText: Seemingly empty.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Wait, what's this mountain?
+    - Speaker: 
+      LineOneText: Wait, what's this mountain?
       LineTwoText: (a) Cyclops lies sleeping!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Who dares disturb me
+    - Speaker: 
+      LineOneText: Who dares disturb me
       LineTwoText: From my sweet slumber?
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: (I'll) Eat you, but first
+    - Speaker: 
+      LineOneText: (I'll) Eat you, but first
       LineTwoText: Who am I killing?
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Oh, I am No-One
+    - Speaker: 
+      LineOneText: Oh, I am No-One
       LineTwoText: Here to defeat you!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
+    ChorusLines: []
   - Name: Love Thinks Hero is Dead
     Lines:
-    - LineOneText: What are you saying?
+    - Speaker: 
+      LineOneText: What are you saying?
       LineTwoText: Where is my lover?
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: They can't have perished!
+    - Speaker: 
+      LineOneText: They can't have perished!
       LineTwoText: Tell me you're joking!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Oh, my poor hero
+    - Speaker: 
+      LineOneText: Oh, my poor hero
       LineTwoText: What has befell you
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Killed by a monster
+    - Speaker: 
+      LineOneText: Killed by a monster
       LineTwoText: Drowned in the ocean?
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: What could have happened
+    - Speaker: 
+      LineOneText: What could have happened
       LineTwoText: (to) Take you from this life?
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: Love, if you're out there?
+    - Speaker: 
+      LineOneText: Love, if you're out there?
       LineTwoText: Please be alive!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
+    ChorusLines: []
   - Name: Hero Reunites with Love
     Lines:
-    - LineOneText: I've missed you greatly,
+    - Speaker: 
+      LineOneText: I've missed you greatly,
       LineTwoText: Hero, my lover.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: Lonesome, I wandered
+    - Speaker: 
+      LineOneText: Lonesome, I wandered
       LineTwoText: All through the village,
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - LineOneText: Restlessly searching
+    - Speaker: 
+      LineOneText: Restlessly searching
       LineTwoText: (for) News of your travels.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - LineOneText: Worried you'd perished,
+    - Speaker: 
+      LineOneText: Worried you'd perished,
       LineTwoText: nightmares have plagued me.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 2
       Direction: 0
-    - LineOneText: With your return, now
+    - Speaker: 
+      LineOneText: With your return, now
       LineTwoText: I can sleep peacef'lly.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
-    - LineOneText: Joyous occasion!
+    - Speaker: 
+      LineOneText: Joyous occasion!
       LineTwoText: We're reunited!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 1
       Direction: 0
+    ChorusLines: []
   - Name: Hero Returns Home
     Lines:
-    - LineOneText: Friends, gather '?'round, I'll
-      LineTwoText: 
+    - Speaker: 
+      LineOneText: Friends, gather 'round, I'll
+      LineTwoText: Tell you a story
+      LineOneAudio: {fileID: 0}
+      LineTwoAudio: {fileID: 0}
+      Emote: 1
+      Direction: 0
+    - Speaker: 
+      LineOneText: (of) My many travels,
+      LineTwoText: Hardships and glories.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: 
-      LineTwoText: 
+    - Speaker: 
+      LineOneText: (I) fought many monsters,
+      LineTwoText: Just barely survived!
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: 
-      LineTwoText: 
+    - Speaker: 
+      LineOneText: (and) found a new island
+      LineTwoText: Full of strange riches.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: 
-      LineTwoText: 
+    - Speaker: 
+      LineOneText: Now, I'll announce my
+      LineTwoText: Many discov'ries.
       LineOneAudio: {fileID: 0}
       LineTwoAudio: {fileID: 0}
       Emote: 0
       Direction: 0
-    - LineOneText: 
-      LineTwoText: 
-      LineOneAudio: {fileID: 0}
-      LineTwoAudio: {fileID: 0}
-      Emote: 0
-      Direction: 0
-    - LineOneText: 
-      LineTwoText: 
-      LineOneAudio: {fileID: 0}
-      LineTwoAudio: {fileID: 0}
-      Emote: 0
-      Direction: 0
+    ChorusLines: []

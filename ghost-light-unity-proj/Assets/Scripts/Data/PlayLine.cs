@@ -8,6 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayLine
 {
+    public string Speaker = "";
     public string LineOneText = "";
     public string LineTwoText = "";
     public AudioClip LineOneAudio;

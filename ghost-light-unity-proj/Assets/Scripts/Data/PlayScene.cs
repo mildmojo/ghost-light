@@ -11,4 +11,5 @@ public class PlayScene
 {
     public string Name;
     public List<PlayLine> Lines = new List<PlayLine>();
+    public List<PlayLine> ChorusLines = new List<PlayLine>();
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // Establish rhythm with audio
 // On meter beats, advance selected actor
@@ -17,6 +18,7 @@ public class MeterManager : MonoBehaviour {
   private double elapsedTime;
   private int beatCount;
 
+    public UnityEvent OnActorChanged = new UnityEvent();
   public void Start() {
     lastTick = AudioSettings.dspTime;
 
@@ -47,5 +49,7 @@ public class MeterManager : MonoBehaviour {
     actorIdx = (actorIdx + 1) % actors.Count;
     selectedActor = actors[actorIdx];
     selectedActor.Select();
+
+        OnActorChanged.Invoke();
   }
 }
