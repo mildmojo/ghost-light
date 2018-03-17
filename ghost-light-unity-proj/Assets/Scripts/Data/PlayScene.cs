@@ -10,6 +10,8 @@ using UnityEngine;
 public class PlayScene
 {
     public string Name;
+    public AudioClip MusicTrack;
+
     [Tooltip("What non-chorus actors are in this scene?")]
     public List<Role> Roles = new List<Role>();
     public List<PlayLine> Lines = new List<PlayLine>();
