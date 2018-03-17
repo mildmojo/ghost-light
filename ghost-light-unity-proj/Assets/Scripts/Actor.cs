@@ -4,6 +4,8 @@ using UnityEngine;
 using InControl;
 
 public class Actor : MonoBehaviour {
+  public float moveSpeed;
+  public float deadZone;
   public GameObject spotlight;
 
   public enum Direction {
@@ -13,27 +15,55 @@ public class Actor : MonoBehaviour {
     LEFT = 4
   }
 
+  private Vector3 motion;
+  private float sqrMoveSpeed;
+  private float sqrDeadzone;
+  private bool isSelected;
 
   public void Start() {
+    sqrMoveSpeed = moveSpeed * moveSpeed;
+    sqrDeadzone = deadZone * deadZone;
   }
 
   public void Update() {
-    handleInputs();
+    if (isSelected) {
+      handleInputs();
+    }
+    gameObject.transform.position += motion;
   }
 
   public void Select() {
     spotlight.SetActive(true);
+    isSelected = true;
   }
 
   public void Unselect() {
     spotlight.SetActive(false);
+    isSelected = false;
   }
 
   private void handleInputs() {
-    var inputDevice = InputManager.ActiveDevice;
+    motion = Vector3.zero;
 
-    if (inputDevice.LeftStickX < 0) {
+    if (Input.GetButton("LeftArrow")) {
+      motion += Vector3.left * moveSpeed;
+    }
+    if (Input.GetButton("RightArrow")) {
+      motion += Vector3.right * moveSpeed;
+    }
+    if (Input.GetButton("UpArrow")) {
+      motion += Vector3.up * moveSpeed;
+    }
+    if (Input.GetButton("DownArrow")) {
+      motion += Vector3.down * moveSpeed;
+    }
 
+    if (motion.sqrMagnitude < sqrDeadzone) {
+      motion = Vector3.zero;
+    }
+
+    if (motion.sqrMagnitude > sqrMoveSpeed) {
+      motion = motion.normalized * moveSpeed;
     }
   }
 }
