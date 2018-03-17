@@ -57,6 +57,10 @@ public class StageManager : MonoBehaviour {
     // currentSecondaryAction = SecondaryAction.MOVE;
   }
 
+    public void ResetMomentum()
+    {
+        momentum = momentumMax;
+    }
   public bool CanActorMove() {
     return currentSecondaryAction == SecondaryAction.MOVE;
   }

@@ -19,7 +19,7 @@ public class ScriptDisplayer : MonoBehaviour {
             display.text = "";
         } else
         {
-            string newText = string.Format("{0}\n{1}", newLine.LineOneText, newLine.LineTwoText);
+            string newText = string.Format("{0}:\n{1}\n{2}",newLine.Speaker, newLine.LineOneText, newLine.LineTwoText);
             display.text = newText;
         }
     }

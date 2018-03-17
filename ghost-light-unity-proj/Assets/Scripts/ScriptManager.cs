@@ -37,7 +37,7 @@ public class ScriptManager : MonoBehaviour {
 
             if(currentLineIndex >= CurrentScene.Lines.Count)
             {
-                if(currentLineIndex < CurrentScene.Lines.Count + CurrentScene.ChorusLines.Count - 2)
+                if(currentLineIndex < CurrentScene.Lines.Count + CurrentScene.ChorusLines.Count)
                 {
                     if(currentLineIndex == CurrentScene.Lines.Count)
                     {
@@ -81,18 +81,30 @@ public class ScriptManager : MonoBehaviour {
         OnLineChanged.Invoke(CurrentLine);
     }
 
+    private void Update()
+    {
+        if (!Menu.Instance.Open && StageManager.instance.momentumMeter.value <= 0)
+        {
+            Menu.Instance.Lose();
+            StageManager.instance.ResetMomentum();
+        }
+    }
+
     void NextLine()
     {
         currentLineIndex++;
 
         if(CurrentLine == null)
         {
-            NewScene();
+            if(StageManager.instance.momentumMeter.value > 0)
+            {
+                Menu.Instance.Win();
+            }
         }
         OnLineChanged.Invoke(CurrentLine);
     }
 
-    void NewScene()
+    public void NewScene()
     {
         OnSceneEnded.Invoke();
 
@@ -102,13 +114,19 @@ public class ScriptManager : MonoBehaviour {
         UpdateActors();
     }
 
+    public void RetryScene()
+    {
+        currentLineIndex = 0;
+        UpdateActors();
+    }
+
     void UpdateActors()
     {
         foreach(ActorPosition ap in actorPositions)
         {
             if(ap.transform.childCount > 0)
             {
-                Destroy(ap.transform.GetChild(0));
+                Destroy(ap.transform.GetChild(0).gameObject);
             }
         }
         int actorCount = 0;

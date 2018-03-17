@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour {
     public Transform mainPanel;
+    public Transform winPanel;
+    public Transform losePanel;
 
     public bool Open
     {
-        get { return mainPanel.gameObject.activeInHierarchy; }
+        get
+        {
+            return (mainPanel.gameObject.activeInHierarchy 
+                    || winPanel.gameObject.activeInHierarchy
+                    || losePanel.gameObject.activeInHierarchy);
+        }
     }
 
     public static Menu Instance;
@@ -15,6 +22,8 @@ public class Menu : MonoBehaviour {
 	void Start () {
         Instance = this;
         mainPanel.gameObject.SetActive(true);
+        winPanel.gameObject.SetActive(false);
+        losePanel.gameObject.SetActive(false);
     }
 
     void Update () {
@@ -34,6 +43,28 @@ public class Menu : MonoBehaviour {
     {
         Time.timeScale = 0;
         mainPanel.gameObject.SetActive(true);
+    }
+
+    public void Win()
+    {
+        winPanel.gameObject.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        winPanel.gameObject.SetActive(false);
+        ScriptManager.instance.NewScene();
+    }
+
+    public void Lose()
+    {
+        losePanel.gameObject.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        losePanel.gameObject.SetActive(false);
+        ScriptManager.instance.RetryScene();
     }
 
     public void StartGame()
