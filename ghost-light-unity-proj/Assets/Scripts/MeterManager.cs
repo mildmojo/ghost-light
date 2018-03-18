@@ -72,12 +72,37 @@ public class MeterManager : MonoBehaviour {
     if (dspNow > nextTickAt) {
       nextTickAt = dspNow + beatLength();
       beatCount++;
+      OnBeat.Invoke();
       if (beatCount > 0 && beatCount % beatsPerActor == 0) {
         onMeasureFinish.Invoke();
       }
     }
 
+    if (dspNow > nextTickAt - beatLength() + windowForInputSecs / 2f) {
+      OnExitSyllableWindow.Invoke();
+    }
+
     UpdateBeatsPerActor();
+  }
+
+  public void Reset() {
+    deltaTime = 0;
+    beatCount = 0;
+    lineIdx = 0;
+    actorIdx = 0;
+    actors.ForEach(actor => actor.Unselect());
+    selectedActor = actors[0];
+    selectedActor.Select();
+
+    UpdateBeatsPerActor();
+
+    musicSource.Stop();
+    musicSource.clip = scriptManager.CurrentScene.MusicTrack;
+    musicSource.Play();
+
+    lastTick = AudioSettings.dspTime;
+    nextTickAt = AudioSettings.dspTime;
+    gameStartTick = AudioSettings.dspTime;
   }
 
   public void UpdateBeatsPerActor() {

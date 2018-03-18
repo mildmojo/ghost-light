@@ -13,6 +13,7 @@ public class StageManager : MonoBehaviour {
   public float momentumMax;
   public Slider momentumMeter;
   public PlayScript script;
+  public float momentum;
 
   [HideInInspector]
   public PlayScene currentScene;
@@ -32,7 +33,6 @@ public class StageManager : MonoBehaviour {
   private SecondaryAction[] secondaryActions = new[] { SecondaryAction.MOVE, SecondaryAction.EMOTE };
   private SecondaryAction currentSecondaryAction;
   private State currentState;
-  private float momentum;
 
   void Awake() {
     instance = this;
@@ -50,17 +50,27 @@ public class StageManager : MonoBehaviour {
   }
 
   void Update() {
+    if (currentState != State.PLAY) return;
+
     // Placeholder; do this in response to input.
-    currentState = State.PLAY;
     momentum -= momentumDecayRate * (float)MeterManager.instance.deltaTime;
     momentumMeter.value = momentum;
     // currentSecondaryAction = SecondaryAction.MOVE;
   }
 
-    public void ResetMomentum()
-    {
-        momentum = momentumMax;
+  public void ResetMomentum()
+  {
+      momentum = momentumMax;
+  }
+
+  public void SetGameState(State newState) {
+    currentState = newState;
+
+    if (currentState == State.PLAY) {
+      ResetMomentum();
     }
+  }
+
   public bool CanActorMove() {
     return currentSecondaryAction == SecondaryAction.MOVE;
   }
