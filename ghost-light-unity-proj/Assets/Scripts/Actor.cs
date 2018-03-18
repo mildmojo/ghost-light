@@ -30,6 +30,7 @@ public class Actor : MonoBehaviour {
   private bool isSelected;
   private bool hasHitMark;
   private Rigidbody body;
+  private bool syllableFinished;
 
     private void Awake()
     {
@@ -42,11 +43,13 @@ public class Actor : MonoBehaviour {
     sqrDeadzone = deadZone * deadZone;
     body = GetComponent<Rigidbody>();
 
+
         if(role != Role.Chorus)
         {
             ScriptManager.OnLineChanged.AddListener(UpdateMainActorStance);
         }
         ScriptManager.OnLineChanged.AddListener(UpdateEmotion);
+        meterManager.OnExitSyllableWindow.AddListener(() => syllableFinished = false);
 
     facesByEmotion = EmotionMap.ToDictionary(t => t.Emotion, t => t.EmotionSprite);
    }
@@ -85,6 +88,8 @@ public class Actor : MonoBehaviour {
 
     private void UpdateMainActorStance(PlayLine line)
     {
+        if (line == null) return;
+
         if(line.Speaker == role)
         {
             spotlight.SetActive(true);
@@ -96,6 +101,8 @@ public class Actor : MonoBehaviour {
 
     private void UpdateEmotion(PlayLine line)
     {
+        if (line == null) return;
+
         if(role == Role.Chorus || line.Speaker == role)
         {
             if (facesByEmotion.ContainsKey(line.Emote))
@@ -144,16 +151,23 @@ public class Actor : MonoBehaviour {
     }
 
     if (Input.GetButtonDown("LongSyllable")) {
+      if (syllableFinished) return;
+
       if (meterManager.IsOnLongSyllable()) {
         stageManager.ActorSuccess();
+        syllableFinished = true;
       } else {
         stageManager.ActorFail();
       }
     }
 
     if (Input.GetButtonDown("ShortSyllable")) {
+      if (syllableFinished) return;
+
       if (meterManager.IsOnShortSyllable()) {
         stageManager.ActorSuccess();
+        syllableFinished = true;
+        Debug.Log(meterManager.beatCount);
       } else {
         stageManager.ActorFail();
       }

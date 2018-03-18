@@ -14,7 +14,10 @@ public class MeterManager : MonoBehaviour {
   public AudioClip musicClip;
   public AudioSource musicSource;
   public UnityEvent onMeasureFinish = new UnityEvent();
+  public UnityEvent OnBeat = new UnityEvent();
+  public UnityEvent OnExitSyllableWindow = new UnityEvent();
   public UnityEvent OnActorChanged = new UnityEvent();
+  public GameObject flasher;
   public List<Actor> actors;
 
   [HideInInspector]
