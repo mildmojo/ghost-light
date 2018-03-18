@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: 
   Scenes:
   - Name: Hero Leaves Home
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: 3f682a46c91874b41acd0226f6429b0b, type: 3}
     Roles: 0100000003000000
     Lines:
     - Speaker: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Hero Fights Sea Witch
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: b0e8a571ae9984902833796dd9f19380, type: 3}
     Roles: 0100000004000000
     Lines:
     - Speaker: 1
@@ -216,7 +216,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Hero Fights Cyclops on Island
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: b0e8a571ae9984902833796dd9f19380, type: 3}
     Roles: 0100000005000000
     Lines:
     - Speaker: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Love Thinks Hero is Dead
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: b0e8a571ae9984902833796dd9f19380, type: 3}
     Roles: 03000000
     Lines:
     - Speaker: 3
@@ -418,7 +418,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Hero Reunites with Love
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: 3f682a46c91874b41acd0226f6429b0b, type: 3}
     Roles: 
     Lines:
     - Speaker: 3
@@ -519,7 +519,7 @@ MonoBehaviour:
       Emote: 0
       Direction: 0
   - Name: Hero Returns Home
-    MusicTrack: {fileID: 0}
+    MusicTrack: {fileID: 8300000, guid: 3f682a46c91874b41acd0226f6429b0b, type: 3}
     Roles: 0100000003000000
     Lines:
     - Speaker: 1
