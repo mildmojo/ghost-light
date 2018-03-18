@@ -50,9 +50,6 @@ public class MeterManager : MonoBehaviour {
     UpdateBeatsPerActor();
     onMeasureFinish.AddListener(NextActor);
 
-    musicSource.clip = scriptManager.CurrentScene.MusicTrack;
-    musicSource.Play();
-
     lastTick = AudioSettings.dspTime;
     nextTickAt = AudioSettings.dspTime;
     gameStartTick = AudioSettings.dspTime;

@@ -83,7 +83,7 @@ public class ScriptManager : MonoBehaviour {
 
     private void Update()
     {
-        if (!Menu.Instance.Open && StageManager.instance.momentumMeter.value <= 0)
+        if (!Menu.Instance.Open && StageManager.instance.momentum <= 0)
         {
             Menu.Instance.Lose();
             StageManager.instance.ResetMomentum();
@@ -96,7 +96,7 @@ public class ScriptManager : MonoBehaviour {
 
         if(CurrentLine == null)
         {
-            if(StageManager.instance.momentumMeter.value > 0)
+            if(StageManager.instance.momentum > 0)
             {
                 Menu.Instance.Win();
             }
@@ -118,6 +118,7 @@ public class ScriptManager : MonoBehaviour {
     {
         currentLineIndex = 0;
         UpdateActors();
+        OnLineChanged.Invoke(null);
     }
 
     void UpdateActors()
