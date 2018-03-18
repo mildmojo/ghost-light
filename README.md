@@ -1,5 +1,2 @@
-ghost-light
-===========
-
-Get the ghost across the stage, possessing actors and performing their roles,
-and bring your friend back across the same way.
+# ghost-light
+Train Jam 2018 game about a ghost moving through a live theater production by possessing the actors.
